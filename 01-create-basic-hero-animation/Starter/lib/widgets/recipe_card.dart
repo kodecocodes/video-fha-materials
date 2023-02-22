@@ -93,7 +93,7 @@ class RecipeCard extends StatelessWidget {
         padding: isLandscape ? const EdgeInsets.all(8) : null,
         child: Stack(
           children: <Widget>[
-            const Background(),
+            Background(recipeName: recipe.name),
             content,
           ],
         ),
