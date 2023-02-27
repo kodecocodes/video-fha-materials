@@ -60,14 +60,23 @@ class _RecipesState extends State<Recipes> {
     );
   }
 
+  void _navigateOnboarding() {
+    Navigator.of(context).pop();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(
-          Icons.arrow_back_ios,
-          size: 28,
+        leading: TextButton(
+          onPressed: _navigateOnboarding,
+          child: const Icon(
+            Icons.arrow_back_ios,
+            size: 28,
+            color: Colors.white,
+          ),
         ),
+        centerTitle: false,
         title: _appTitle(context),
         actions: const <Widget>[
           Padding(
@@ -93,24 +102,24 @@ class _RecipesState extends State<Recipes> {
     );
   }
 
-    Widget _appTitle(BuildContext context) {
+  Widget _appTitle(BuildContext context) {
     return Hero(
       tag: 'appTitle',
-      child: RichText(
-        text: TextSpan(
-          text: 'FO',
-          style: Theme.of(context).textTheme.displaySmall?.copyWith(
-              color: const Color(0xFFF2AC25), fontWeight: FontWeight.w700),
-          children: [
-            TextSpan(
-              text: 'ODer',
-              style: Theme.of(context)
-                  .textTheme
-                  .displaySmall
-                  ?.copyWith(color: Colors.white, fontWeight: FontWeight.w700),
-            ),
-          ],
-        ),
+      child: Row(
+        children: [
+          Text(
+            'FO',
+            style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                color: const Color(0xFFF2AC25), fontWeight: FontWeight.w700),
+          ),
+          Text(
+            'ODer',
+            style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
+                ),
+          ),
+        ],
       ),
     );
   }

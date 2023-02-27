@@ -123,21 +123,21 @@ class Onboarding extends StatelessWidget {
   }
 
   Widget _appTitle(BuildContext context) {
-    return RichText(
-      text: const TextSpan(
-        text: 'FO',
-        style: TextStyle(
-            fontSize: 36,
-            color: Color(0xFFF2AC25),
-            fontWeight: FontWeight.w700),
-        children: [
-          TextSpan(
-            text: 'ODer',
-            style: TextStyle(
-                fontSize: 36, color: Colors.white, fontWeight: FontWeight.w700),
-          ),
-        ],
-      ),
+    return Row(
+      children: const [
+        Text(
+          'FO',
+          style: TextStyle(
+              fontSize: 36,
+              color: Color(0xFFF2AC25),
+              fontWeight: FontWeight.w700),
+        ),
+        Text(
+          'ODer',
+          style: TextStyle(
+              fontSize: 36, color: Colors.white, fontWeight: FontWeight.w700),
+        ),
+      ],
     );
   }
 

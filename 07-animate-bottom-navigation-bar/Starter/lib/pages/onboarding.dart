@@ -125,21 +125,21 @@ class Onboarding extends StatelessWidget {
   Widget _appTitle(BuildContext context) {
     return Hero(
       tag: 'appTitle',
-      child: RichText(
-        text: TextSpan(
-          text: 'FO',
-          style: Theme.of(context).textTheme.displaySmall?.copyWith(
-              color: const Color(0xFFF2AC25), fontWeight: FontWeight.w700),
-          children: [
-            TextSpan(
-              text: 'ODer',
-              style: Theme.of(context)
-                  .textTheme
-                  .displaySmall
-                  ?.copyWith(color: Colors.white, fontWeight: FontWeight.w700),
-            ),
-          ],
-        ),
+      child: Row(
+        children: [
+          Text(
+            'FO',
+            style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                color: const Color(0xFFF2AC25), fontWeight: FontWeight.w700),
+          ),
+          Text(
+            'ODer',
+            style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
+                ),
+          ),
+        ],
       ),
     );
   }
