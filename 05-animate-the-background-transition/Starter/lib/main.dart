@@ -37,7 +37,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'pages/recipes.dart';
+import 'pages/onboarding.dart';
 
 void main() => runApp(const MyApp());
 
@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
-      home: const Recipes(),
+      home: const Onboarding(),
     );
   }
 }
